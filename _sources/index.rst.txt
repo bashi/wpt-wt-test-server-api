@@ -1,0 +1,15 @@
+.. webtransport-test-server documentation master file, created by
+   sphinx-quickstart on Sun Jun 13 14:14:41 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+webtransport-test-server
+========================
+
+A prototype of WebTransport over HTTP/3 test server which is intended for writing web-platform-tests.
+
+.. toctree::
+   :maxdepth: 2
+
+   session
+   events

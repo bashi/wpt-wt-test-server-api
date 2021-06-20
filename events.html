@@ -124,6 +124,26 @@ a unidirectional WebTransport stream.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="webtransport.events.WebTransportConnectReceived">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">WebTransportConnectReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.WebTransportConnectReceived" title="Permalink to this definition">¶</a></dt>
+<dd><p>The WebTransportConnectReceived event is fired whenever an
+extended CONNECT method is received for WebTransport.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.WebTransportConnectReceived.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#webtransport.events.WebTransportConnectReceived.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">:path</span></code> pseudo header value in the extended CONNECT method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.WebTransportConnectReceived.response_headers">
+<span class="sig-name descname"><span class="pre">response_headers</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#webtransport.events.WebTransportConnectReceived.response_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The response headers which will be sent to the peer. <code class="docutils literal notranslate"><span class="pre">:status</span></code> is set
+to 200 when it isn’t specified.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="webtransport.events.WebTransportEvent">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">WebTransportEvent</span></span><a class="headerlink" href="#webtransport.events.WebTransportEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for WebTransport events.</p>

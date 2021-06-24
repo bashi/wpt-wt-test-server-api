@@ -33,13 +33,12 @@
 
           <div class="body" role="main">
             
-  <section id="module-webtransport.session">
-<span id="session"></span><h1>Session<a class="headerlink" href="#module-webtransport.session" title="Permalink to this headline">¶</a></h1>
+  <section id="module-webtransport.protocol">
+<span id="session"></span><h1>Session<a class="headerlink" href="#module-webtransport.protocol" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="webtransport.session.WebTransportSession">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.session.</span></span><span class="sig-name descname"><span class="pre">WebTransportSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.session.WebTransportSession" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="webtransport.protocol.WebTransportSession">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.protocol.</span></span><span class="sig-name descname"><span class="pre">WebTransportSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.protocol.WebTransportSession" title="Permalink to this definition">¶</a></dt>
 <dd><p>A WebTransport session.</p>
-<p>This is created before establishing a WebTransport session.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>quic</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">QuicConnection</span></code>) – The QUIC connection on which this WebTransport session
@@ -47,8 +46,8 @@ is established on.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="webtransport.session.WebTransportSession.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">error_code=&lt;QuicErrorCode.NO_ERROR:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.session.WebTransportSession.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="webtransport.protocol.WebTransportSession.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">error_code=&lt;QuicErrorCode.NO_ERROR:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.protocol.WebTransportSession.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close the session.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -62,12 +61,38 @@ being closed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="webtransport.session.WebTransportSession.send_datagram">
-<span class="sig-name descname"><span class="pre">send_datagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.session.WebTransportSession.send_datagram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send data using a datagram frame.</p>
+<dt class="sig sig-object py" id="webtransport.protocol.WebTransportSession.create_unidirectional_stream">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">create_unidirectional_stream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.protocol.WebTransportSession.create_unidirectional_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a unidirectional stream and return a tuple of (reader, writer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webtransport.protocol.WebTransportSession.create_bidirectional_stream">
+<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">create_bidirectional_stream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.protocol.WebTransportSession.create_bidirectional_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a bidirectional stream and return a tuple of (reader, writer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">StreamReader</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">StreamWriter</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webtransport.protocol.WebTransportSession.send_stream_data">
+<span class="sig-name descname"><span class="pre">send_stream_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.protocol.WebTransportSession.send_stream_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send data on the specific stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – The data to send.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The stream ID on which to send the data.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – The data to send.</p></li>
+<li><p><strong>end_stream</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If set to True, the stream will be closed.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
@@ -76,15 +101,12 @@ being closed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="webtransport.session.WebTransportSession.send_stream_data">
-<span class="sig-name descname"><span class="pre">send_stream_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.session.WebTransportSession.send_stream_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send data on the specific stream.</p>
+<dt class="sig sig-object py" id="webtransport.protocol.WebTransportSession.send_datagram">
+<span class="sig-name descname"><span class="pre">send_datagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.protocol.WebTransportSession.send_datagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send data using a datagram frame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>stream_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The stream ID on which to send the data.</p></li>
-<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – The data to send.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – The data to send.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
@@ -116,6 +138,7 @@ being closed.</p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handler.html">Handler API</a></li>
 </ul>
 
 <div class="relations">

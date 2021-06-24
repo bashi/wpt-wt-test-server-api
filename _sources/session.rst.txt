@@ -1,5 +1,7 @@
 Session
 =======
 
-.. automodule:: webtransport.session
-   :members:
+.. automodule:: webtransport.protocol
+
+    .. autoclass:: WebTransportSession
+        :members:

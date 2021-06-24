@@ -1,0 +1,5 @@
+Handler API
+===========
+
+.. automodule:: webtransport.handler
+   :members:

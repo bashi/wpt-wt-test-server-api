@@ -15,6 +15,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Handler API" href="handler.html" />
     <link rel="prev" title="Session" href="session.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -35,92 +36,9 @@
   <section id="module-webtransport.events">
 <span id="events"></span><h1>Events<a class="headerlink" href="#module-webtransport.events" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamDataReceived">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">BidirectionalStreamDataReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.BidirectionalStreamDataReceived" title="Permalink to this definition">¶</a></dt>
-<dd><p>The BidirectionalStreamDataReceived event is fired whenever a chunk of body
-is received on a WebTransport bidirectional stream.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamDataReceived.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamDataReceived.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The chunk of body which was received.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamDataReceived.stream_id">
-<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamDataReceived.stream_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the stream the data was received for.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamOpened">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">BidirectionalStreamOpened</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.BidirectionalStreamOpened" title="Permalink to this definition">¶</a></dt>
-<dd><p>The BidirectionalStreamOpened event is fired whenever the peer initiated
-a bidirectional WebTransport stream.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamOpened.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamOpened.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first chunk of body which was received with the opening.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamOpened.stream_id">
-<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamOpened.stream_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the stream the data was received for.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="webtransport.events.DatagramReceived">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">DatagramReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.DatagramReceived" title="Permalink to this definition">¶</a></dt>
-<dd><p>The DatagramReceived event is fired whenever the peer sent a
-WebTransport datagram.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.DatagramReceived.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.DatagramReceived.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>A chunk of body which was received.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamDataReceived">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">UnidirectionalStreamDataReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.UnidirectionalStreamDataReceived" title="Permalink to this definition">¶</a></dt>
-<dd><p>The UnidirectionalStreamDataDataReceived event is fired whenever a chunk of
-body is received on a WebTransport unidirectional stream.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamDataReceived.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamDataReceived.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The chunk of body which was received.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamDataReceived.stream_id">
-<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamDataReceived.stream_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the stream the data was received for.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamOpened">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">UnidirectionalStreamOpened</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.UnidirectionalStreamOpened" title="Permalink to this definition">¶</a></dt>
-<dd><p>The UnidirectionalStreamOpened event is fired whenever the peer initiated
-a unidirectional WebTransport stream.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamOpened.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamOpened.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first chunk of body which was received with the opening.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamOpened.stream_id">
-<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamOpened.stream_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the stream the data was received for.</p>
-</dd></dl>
-
+<dt class="sig sig-object py" id="webtransport.events.WebTransportEvent">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">WebTransportEvent</span></span><a class="headerlink" href="#webtransport.events.WebTransportEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for WebTransport events.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -136,17 +54,11 @@ extended CONNECT method is received for WebTransport.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="webtransport.events.WebTransportConnectReceived.response_headers">
-<span class="sig-name descname"><span class="pre">response_headers</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#webtransport.events.WebTransportConnectReceived.response_headers" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">response_headers</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">,</span> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#webtransport.events.WebTransportConnectReceived.response_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response headers which will be sent to the peer. <code class="docutils literal notranslate"><span class="pre">:status</span></code> is set
 to 200 when it isn’t specified.</p>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="webtransport.events.WebTransportEvent">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">WebTransportEvent</span></span><a class="headerlink" href="#webtransport.events.WebTransportEvent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base class for WebTransport events.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -158,6 +70,95 @@ webtransport session is established.</p>
 <dt class="sig sig-object py" id="webtransport.events.WebTransportSessionEstablished.path">
 <span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#webtransport.events.WebTransportSessionEstablished.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamOpened">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">UnidirectionalStreamOpened</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.UnidirectionalStreamOpened" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UnidirectionalStreamOpened event is fired whenever the peer initiated
+a unidirectional WebTransport stream.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamOpened.stream_id">
+<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamOpened.stream_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the stream the data was received for.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamOpened.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamOpened.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The first chunk of body which was received with the opening.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamOpened">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">BidirectionalStreamOpened</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.BidirectionalStreamOpened" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BidirectionalStreamOpened event is fired whenever the peer initiated
+a bidirectional WebTransport stream.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamOpened.stream_id">
+<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamOpened.stream_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the stream the data was received for.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamOpened.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamOpened.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The first chunk of body which was received with the opening.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamDataReceived">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">UnidirectionalStreamDataReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.UnidirectionalStreamDataReceived" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UnidirectionalStreamDataDataReceived event is fired whenever a chunk of
+body is received on a WebTransport unidirectional stream.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamDataReceived.stream_id">
+<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamDataReceived.stream_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the stream the data was received for.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.UnidirectionalStreamDataReceived.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.UnidirectionalStreamDataReceived.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The chunk of body which was received.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamDataReceived">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">BidirectionalStreamDataReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.BidirectionalStreamDataReceived" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BidirectionalStreamDataReceived event is fired whenever a chunk of body
+is received on a WebTransport bidirectional stream.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamDataReceived.stream_id">
+<span class="sig-name descname"><span class="pre">stream_id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamDataReceived.stream_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the stream the data was received for.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.BidirectionalStreamDataReceived.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.BidirectionalStreamDataReceived.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The chunk of body which was received.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="webtransport.events.DatagramReceived">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">webtransport.events.</span></span><span class="sig-name descname"><span class="pre">DatagramReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webtransport.events.DatagramReceived" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DatagramReceived event is fired whenever the peer sent a
+WebTransport datagram.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="webtransport.events.DatagramReceived.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#webtransport.events.DatagramReceived.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>A chunk of body which was received.</p>
 </dd></dl>
 
 </dd></dl>
@@ -184,6 +185,7 @@ webtransport session is established.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="session.html">Session</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handler.html">Handler API</a></li>
 </ul>
 
 <div class="relations">
@@ -191,6 +193,7 @@ webtransport session is established.</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="session.html" title="previous chapter">Session</a></li>
+      <li>Next: <a href="handler.html" title="next chapter">Handler API</a></li>
   </ul></li>
 </ul>
 </div>

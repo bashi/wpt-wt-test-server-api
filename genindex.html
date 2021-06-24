@@ -37,6 +37,7 @@
  <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
@@ -60,7 +61,15 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="session.html#webtransport.session.WebTransportSession.close">close() (webtransport.session.WebTransportSession method)</a>
+      <li><a href="session.html#webtransport.protocol.WebTransportSession.close">close() (webtransport.protocol.WebTransportSession method)</a>
+</li>
+      <li><a href="handler.html#webtransport.handler.connect_received">connect_received() (in module webtransport.handler)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="session.html#webtransport.protocol.WebTransportSession.create_bidirectional_stream">create_bidirectional_stream() (webtransport.protocol.WebTransportSession method)</a>
+</li>
+      <li><a href="session.html#webtransport.protocol.WebTransportSession.create_unidirectional_stream">create_unidirectional_stream() (webtransport.protocol.WebTransportSession method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -82,7 +91,21 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="handler.html#webtransport.handler.datagram_received">datagram_received() (in module webtransport.handler)</a>
+</li>
       <li><a href="events.html#webtransport.events.DatagramReceived">DatagramReceived (class in webtransport.events)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="handler.html#webtransport.handler.incoming_bidirectional_stream_received">incoming_bidirectional_stream_received() (in module webtransport.handler)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="handler.html#webtransport.handler.incoming_unidirectional_stream_received">incoming_unidirectional_stream_received() (in module webtransport.handler)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -96,7 +119,9 @@
       <ul>
         <li><a href="events.html#module-webtransport.events">webtransport.events</a>
 </li>
-        <li><a href="session.html#module-webtransport.session">webtransport.session</a>
+        <li><a href="handler.html#module-webtransport.handler">webtransport.handler</a>
+</li>
+        <li><a href="session.html#module-webtransport.protocol">webtransport.protocol</a>
 </li>
       </ul></li>
   </ul></td>
@@ -125,10 +150,16 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="session.html#webtransport.session.WebTransportSession.send_datagram">send_datagram() (webtransport.session.WebTransportSession method)</a>
+      <li><a href="session.html#webtransport.protocol.WebTransportSession.send_datagram">send_datagram() (webtransport.protocol.WebTransportSession method)</a>
 </li>
-      <li><a href="session.html#webtransport.session.WebTransportSession.send_stream_data">send_stream_data() (webtransport.session.WebTransportSession method)</a>
+      <li><a href="session.html#webtransport.protocol.WebTransportSession.send_stream_data">send_stream_data() (webtransport.protocol.WebTransportSession method)</a>
 </li>
+      <li><a href="handler.html#webtransport.handler.session_established">session_established() (in module webtransport.handler)</a>
+</li>
+      <li><a href="handler.html#webtransport.handler.stream_data_received">stream_data_received() (in module webtransport.handler)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="events.html#webtransport.events.BidirectionalStreamDataReceived.stream_id">stream_id (webtransport.events.BidirectionalStreamDataReceived attribute)</a>
 
       <ul>
@@ -165,10 +196,17 @@
 </li>
       </ul></li>
       <li>
-    webtransport.session
+    webtransport.handler
 
       <ul>
-        <li><a href="session.html#module-webtransport.session">module</a>
+        <li><a href="handler.html#module-webtransport.handler">module</a>
+</li>
+      </ul></li>
+      <li>
+    webtransport.protocol
+
+      <ul>
+        <li><a href="session.html#module-webtransport.protocol">module</a>
 </li>
       </ul></li>
   </ul></td>
@@ -177,7 +215,7 @@
 </li>
       <li><a href="events.html#webtransport.events.WebTransportEvent">WebTransportEvent (class in webtransport.events)</a>
 </li>
-      <li><a href="session.html#webtransport.session.WebTransportSession">WebTransportSession (class in webtransport.session)</a>
+      <li><a href="session.html#webtransport.protocol.WebTransportSession">WebTransportSession (class in webtransport.protocol)</a>
 </li>
       <li><a href="events.html#webtransport.events.WebTransportSessionEstablished">WebTransportSessionEstablished (class in webtransport.events)</a>
 </li>
@@ -205,6 +243,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="session.html">Session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handler.html">Handler API</a></li>
 </ul>
 
 <div class="relations">
